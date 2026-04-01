@@ -1,0 +1,54 @@
+{
+  "agents": [
+    {
+      "name": "Stratasys F3300",
+      "vendor": "Stratasys",
+      "host": "https://f3300.mtconnect.stratasys.com/"
+    },
+    {
+      "name": "Stratasys F450mc",
+      "vendor": "Stratasys",
+      "host": "https://fortus450mc.mtconnect.stratasys.com/"
+    },
+    {
+      "name": "Stratasys F370CR",
+      "vendor": "Stratasys",
+      "host": "https://f370cr.mtconnect.stratasys.com/"
+    },
+    {
+      "name": "MTConnect Institute Demo",
+      "vendor": "MTConnect Institute",
+      "host": "https://demo.mtconnect.org/"
+    },
+    {
+      "name": "Mazak MFMS10-MC1",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5609/"
+    },
+    {
+      "name": "Mazak MFMS10-MC2",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5610/"
+    },
+    {
+      "name": "Mazak Mill w/SMooth-G",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5611/"
+    },
+    {
+      "name": "Mazak MFMS18-MC1 HCN Q",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5612/"
+    },
+    {
+      "name": "Mazak M12345",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5701/"
+    },
+    {
+      "name": "Mazak M12346 3 axis mill",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5717/"
+    },
+  ]
+}
