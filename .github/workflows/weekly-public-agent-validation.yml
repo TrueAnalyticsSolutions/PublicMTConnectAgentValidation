@@ -1,0 +1,64 @@
+name: weekly-public-agent-validation
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      agents: ${{ steps.make.outputs.agents }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build agent matrix from public-agents.json
+        id: make
+        run: |
+          matrix_json=$(python3 scripts/build_matrix.py)
+          echo "agents=$matrix_json" >> "$GITHUB_OUTPUT"
+
+  validate-agents:
+    needs: matrix
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix.outputs.agents) }}
+    uses: ./.github/workflows/validate-agent.yml
+    with:
+      name: ${{ matrix.name }}
+      vendor: ${{ matrix.vendor }}
+      host: ${{ matrix.host }}
+      slug: ${{ matrix.slug }}
+    secrets:
+      MTC_VALIDATOR_API_KEY: ${{ secrets.MTC_VALIDATOR_API_KEY }}
+
+  publish-report:
+    needs: validate-agents
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download status artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: status
+          pattern: status-*
+          merge-multiple: true
+
+      - name: Generate GitHub Pages report and badge JSON
+        run: |
+          python3 scripts/generate_status_site.py
+
+      - name: Deploy report to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site
+          force_orphan: true
