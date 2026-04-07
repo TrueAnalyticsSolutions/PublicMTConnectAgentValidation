@@ -49,6 +49,6 @@
       "name": "Mazak M12346 3 axis mill",
       "vendor": "Mazak",
       "host": "http://mtconnect.mazakcorp.com:5717/"
-    },
+    }
   ]
 }
