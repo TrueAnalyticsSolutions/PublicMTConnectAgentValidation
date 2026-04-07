@@ -2,35 +2,7 @@
 
 Automated validation for publicly available MTConnect Agent `/probe` responses.
 
-## What this repository does
-
-- Reads each public agent endpoint from `public-agents.json`.
-- On a schedule (weekly) or manual trigger, fetches each remote `GET /probe` response.
-- Validates each probe response using `TrueAnalyticsSolutions/mtconnect-validator-action@v4`.
-- Publishes a live status report and per-agent badge JSON to the `gh-pages` branch.
-
-## Workflows
-
-- **Reusable workflow**: `.github/workflows/validate-agent.yml`
-  - Validates one agent (`name`, `vendor`, `host`, `slug`) and uploads a status artifact.
-- **Scheduled orchestrator**: `.github/workflows/weekly-public-agent-validation.yml`
-  - Runs every Monday at 08:00 UTC (`0 8 * * 1`), fans out over all agents in `public-agents.json`, aggregates results, and publishes GitHub Pages content.
-
-## Required secret
-
-Set this repository secret:
-
-- `MTC_VALIDATOR_API_KEY`
-
-## Live status report
-
-After the first successful run, enable GitHub Pages for the repository and use:
-
-- `https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/`
-
 ## Agent compliance badges
-
-> Replace `<OWNER>` with your GitHub org/user name.
 
 | Agent | Badge |
 |---|---|
@@ -44,3 +16,17 @@ After the first successful run, enable GitHub Pages for the repository and use:
 | Mazak MFMS18-MC1 HCN Q | ![Mazak MFMS18-MC1 HCN Q](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms18-mc1-hcn-q.json) |
 | Mazak M12345 | ![Mazak M12345](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-m12345.json) |
 | Mazak M12346 3 axis mill | ![Mazak M12346 3 axis mill](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-m12346-3-axis-mill.json) |
+
+## What this repository does
+
+- Reads each public agent endpoint from `public-agents.json`.
+- On a schedule (weekly) or manual trigger, fetches each remote `GET /probe` response.
+- Validates each probe response using `TrueAnalyticsSolutions/mtconnect-validator-action@v4`.
+- Publishes a live status report and per-agent badge JSON to the `gh-pages` branch.
+
+## Workflows
+
+- **Reusable workflow**: `.github/workflows/validate-agent.yml`
+  - Validates one agent (`name`, `vendor`, `host`, `slug`) and uploads a status artifact.
+- **Scheduled orchestrator**: `.github/workflows/weekly-public-agent-validation.yml`
+  - Runs every Monday at 08:00 UTC (`0 8 * * 1`), fans out over all agents in `public-agents.json`, aggregates results, and publishes GitHub Pages content.
