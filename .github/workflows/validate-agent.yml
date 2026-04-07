@@ -1,0 +1,106 @@
+name: validate-single-agent
+
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+      vendor:
+        required: true
+        type: string
+      host:
+        required: true
+        type: string
+      slug:
+        required: true
+        type: string
+    secrets:
+      MTC_VALIDATOR_API_KEY:
+        required: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch probe response
+        id: fetch
+        shell: bash
+        run: |
+          set -euo pipefail
+          host="${{ inputs.host }}"
+          probe_url="${host%/}/probe"
+          echo "probe_url=$probe_url" >> "$GITHUB_OUTPUT"
+
+          if curl --fail --silent --show-error --location --max-time 90 "$probe_url" -o probe.xml; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            echo "Fetched probe response from $probe_url"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "Failed to fetch probe response from $probe_url"
+            printf '<error host="%s">probe fetch failed</error>\n' "$host" > probe.xml
+          fi
+
+      - name: Validate probe with public validator service
+        id: mtc
+        continue-on-error: true
+        uses: TrueAnalyticsSolutions/mtconnect-validator-action@v4
+        with:
+          api-endpoint: https://validator.tams.ai/api/validation/validate
+          api-key: ${{ secrets.MTC_VALIDATOR_API_KEY }}
+          files: probe.xml
+
+      - name: Create agent status JSON
+        shell: bash
+        env:
+          AGENT_NAME: ${{ inputs.name }}
+          AGENT_VENDOR: ${{ inputs.vendor }}
+          AGENT_HOST: ${{ inputs.host }}
+          AGENT_SLUG: ${{ inputs.slug }}
+          FETCH_OK: ${{ steps.fetch.outputs.ok }}
+          PROBE_URL: ${{ steps.fetch.outputs.probe_url }}
+          VALIDATOR_SUCCESS: ${{ steps.mtc.outputs.success }}
+          RESULTS_JSON: ${{ steps.mtc.outputs.results-json }}
+        run: |
+          set -euo pipefail
+          mkdir -p status
+
+          if [[ "$FETCH_OK" != "true" ]]; then
+            status="unreachable"
+            details="Could not fetch /probe from remote host"
+          else
+            if [[ "$VALIDATOR_SUCCESS" == "true" ]]; then
+              non_compliant=$(echo "$RESULTS_JSON" | jq '[.[] | select(.ok == true and .compliant != true)] | length')
+              if [[ "$non_compliant" -gt 0 ]]; then
+                status="non-compliant"
+                details="Validator API reached, but probe response is not compliant"
+              else
+                status="compliant"
+                details="Probe response is compliant"
+              fi
+            else
+              status="non-compliant"
+              details="Validator API/upload failure"
+            fi
+          fi
+
+          jq -n \
+            --arg name "$AGENT_NAME" \
+            --arg vendor "$AGENT_VENDOR" \
+            --arg host "$AGENT_HOST" \
+            --arg probe_url "$PROBE_URL" \
+            --arg slug "$AGENT_SLUG" \
+            --arg status "$status" \
+            --arg details "$details" \
+            --argjson validator_results "${RESULTS_JSON:-[]}" \
+            '{name:$name,vendor:$vendor,host:$host,probe_url:$probe_url,slug:$slug,status:$status,details:$details,validator_results:$validator_results}' \
+            > "status/${AGENT_SLUG}.json"
+
+      - name: Upload status artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: status-${{ inputs.slug }}
+          path: status/${{ inputs.slug }}.json
