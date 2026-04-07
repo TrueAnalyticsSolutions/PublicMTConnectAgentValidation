@@ -26,7 +26,7 @@ Set this repository secret:
 
 After the first successful run, enable GitHub Pages for the repository and use:
 
-- `https://<OWNER>.github.io/PublicMTConnectAgentValidation/`
+- `https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/`
 
 ## Agent compliance badges
 
@@ -34,13 +34,13 @@ After the first successful run, enable GitHub Pages for the repository and use:
 
 | Agent | Badge |
 |---|---|
-| Stratasys F3300 | ![Stratasys F3300](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/stratasys-f3300.json) |
-| Stratasys F450mc | ![Stratasys F450mc](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/stratasys-f450mc.json) |
-| Stratasys F370CR | ![Stratasys F370CR](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/stratasys-f370cr.json) |
-| MTConnect Institute Demo | ![MTConnect Institute Demo](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mtconnect-institute-demo.json) |
-| Mazak MFMS10-MC1 | ![Mazak MFMS10-MC1](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc1.json) |
-| Mazak MFMS10-MC2 | ![Mazak MFMS10-MC2](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc2.json) |
-| Mazak Mill w/SMooth-G | ![Mazak Mill w/SMooth-G](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-mill-w-smooth-g.json) |
-| Mazak MFMS18-MC1 HCN Q | ![Mazak MFMS18-MC1 HCN Q](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms18-mc1-hcn-q.json) |
-| Mazak M12345 | ![Mazak M12345](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-m12345.json) |
-| Mazak M12346 3 axis mill | ![Mazak M12346 3 axis mill](https://img.shields.io/endpoint?url=https://<OWNER>.github.io/PublicMTConnectAgentValidation/badges/mazak-m12346-3-axis-mill.json) |
+| Stratasys F3300 | ![Stratasys F3300](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f3300.json) |
+| Stratasys F450mc | ![Stratasys F450mc](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f450mc.json) |
+| Stratasys F370CR | ![Stratasys F370CR](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f370cr.json) |
+| MTConnect Institute Demo | ![MTConnect Institute Demo](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mtconnect-institute-demo.json) |
+| Mazak MFMS10-MC1 | ![Mazak MFMS10-MC1](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc1.json) |
+| Mazak MFMS10-MC2 | ![Mazak MFMS10-MC2](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc2.json) |
+| Mazak Mill w/SMooth-G | ![Mazak Mill w/SMooth-G](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mill-w-smooth-g.json) |
+| Mazak MFMS18-MC1 HCN Q | ![Mazak MFMS18-MC1 HCN Q](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms18-mc1-hcn-q.json) |
+| Mazak M12345 | ![Mazak M12345](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-m12345.json) |
+| Mazak M12346 3 axis mill | ![Mazak M12346 3 axis mill](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-m12346-3-axis-mill.json) |
