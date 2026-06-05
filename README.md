@@ -9,6 +9,7 @@ Automated validation for publicly available MTConnect Agent `/probe` responses.
 | Stratasys F3300 | ![Stratasys F3300](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f3300.json) |
 | Stratasys F450mc | ![Stratasys F450mc](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f450mc.json) |
 | Stratasys F370CR | ![Stratasys F370CR](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f370cr.json) |
+| Stratasys F900 | ![Stratasys F900](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/stratasys-f900.json) |
 | MTConnect Institute Demo | ![MTConnect Institute Demo](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mtconnect-institute-demo.json) |
 | Mazak MFMS10-MC1 | ![Mazak MFMS10-MC1](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc1.json) |
 | Mazak MFMS10-MC2 | ![Mazak MFMS10-MC2](https://img.shields.io/endpoint?url=https://trueanalyticssolutions.github.io/PublicMTConnectAgentValidation/badges/mazak-mfms10-mc2.json) |
