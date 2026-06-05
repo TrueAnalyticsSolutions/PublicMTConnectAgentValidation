@@ -16,6 +16,11 @@
       "host": "https://f370cr.mtconnect.stratasys.com/"
     },
     {
+      "name": "Stratasys F900",
+      "vendor": "Stratasys",
+      "host": "https://mtconnect.stratasys.com/"
+    },
+    {
       "name": "MTConnect Institute Demo",
       "vendor": "MTConnect Institute",
       "host": "https://demo.mtconnect.org/"
