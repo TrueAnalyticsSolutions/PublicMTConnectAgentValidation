@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
 import datetime as dt
+import html
 import json
+import re
+import uuid
 from pathlib import Path
 
-status_dir = Path("status")
-out_dir = Path("site")
-badges_dir = out_dir / "badges"
-out_dir.mkdir(parents=True, exist_ok=True)
-badges_dir.mkdir(parents=True, exist_ok=True)
-
-rows = []
-for p in sorted(status_dir.glob("*.json")):
-    rows.append(json.loads(p.read_text()))
-
-rows.sort(key=lambda x: x.get("name", ""))
-now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+VALIDATOR_BASE_URL = "https://validator.tams.ai"
+REPORT_UTM_QUERY = "utm_source=github&utm_medium=badge&utm_campaign=mtconnect_validation"
 
 def resolve_status(row):
     status = row.get("status", "unknown")
@@ -25,49 +18,112 @@ def resolve_status(row):
         return "error"
     return status
 
-summary = {
-    "generated_at": now,
-    "total": len(rows),
-    "compliant": sum(1 for r in rows if resolve_status(r) == "compliant"),
-    "non_compliant": sum(1 for r in rows if resolve_status(r) == "non-compliant"),
-    "unreachable": sum(1 for r in rows if resolve_status(r) == "unreachable"),
-    "error": sum(1 for r in rows if resolve_status(r) == "error"),
-    "agents": rows,
-}
-(out_dir / "summary.json").write_text(json.dumps(summary, indent=2))
 
-color_map = {"compliant": "brightgreen", "non-compliant": "orange", "unreachable": "red", "error": "crimson", "unknown": "lightgrey"}
-for r in rows:
-    status = resolve_status(r)
-    badge = {
-        "schemaVersion": 1,
-        "label": r.get("name", "agent"),
-        "message": status,
-        "color": color_map.get(status, "lightgrey"),
+def safe_slug(value):
+    value = re.sub(r"[^a-z0-9]+", "-", str(value).lower()).strip("-")
+    return value or "agent"
+
+
+def normalize_report_id(value):
+    if not isinstance(value, str):
+        return None
+    try:
+        return str(uuid.UUID(value))
+    except (ValueError, AttributeError):
+        return None
+
+
+def report_markup(row, status):
+    report_id = normalize_report_id(row.get("report_id"))
+    if not report_id or status not in {"compliant", "non-compliant"}:
+        return '<span class="report-unavailable">Validation report unavailable</span>'
+
+    name = html.escape(str(row.get("name") or "agent"), quote=True)
+    report_url = f"{VALIDATOR_BASE_URL}/{report_id}?{REPORT_UTM_QUERY}"
+    escaped_report_url = html.escape(report_url, quote=True)
+    badge_url = f"{VALIDATOR_BASE_URL}/badges/reports/{report_id}.svg"
+    embed_url = f"{VALIDATOR_BASE_URL}/embed/reports/{report_id}"
+    return f"""
+      <div class="report-cell">
+        <a href="{escaped_report_url}" target="_blank" rel="noopener noreferrer">
+          <img src="{badge_url}" alt="MTConnect validation status for {name}" loading="lazy" />
+        </a>
+        <details class="report-details">
+          <summary>View embedded report</summary>
+          <iframe
+            data-src="{embed_url}"
+            title="Validation report for {name}"
+            width="100%"
+            height="220"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+          <noscript><a href="{escaped_report_url}">Open the full validation report</a></noscript>
+        </details>
+      </div>
+    """
+
+
+def generate_site(status_dir=Path("status"), out_dir=Path("site")):
+    badges_dir = out_dir / "badges"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    badges_dir.mkdir(parents=True, exist_ok=True)
+
+    rows = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(status_dir.glob("*.json"))]
+    for row in rows:
+        row["report_id"] = normalize_report_id(row.get("report_id"))
+    rows.sort(key=lambda x: x.get("name", ""))
+    now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+
+    summary = {
+        "generated_at": now,
+        "total": len(rows),
+        "compliant": sum(1 for r in rows if resolve_status(r) == "compliant"),
+        "non_compliant": sum(1 for r in rows if resolve_status(r) == "non-compliant"),
+        "unreachable": sum(1 for r in rows if resolve_status(r) == "unreachable"),
+        "error": sum(1 for r in rows if resolve_status(r) == "error"),
+        "agents": rows,
     }
-    (badges_dir / f"{r['slug']}.json").write_text(json.dumps(badge, indent=2))
+    (out_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-status_meta = {
-    "compliant": {"icon": "✅", "label": "Compliant", "class": "status-compliant"},
-    "non-compliant": {"icon": "⚠️", "label": "Non-compliant", "class": "status-non-compliant"},
-    "unreachable": {"icon": "❌", "label": "Unreachable", "class": "status-unreachable"},
-    "error": {"icon": "🛑", "label": "Error", "class": "status-error"},
-    "unknown": {"icon": "❔", "label": "Unknown", "class": "status-unknown"},
-}
+    color_map = {"compliant": "brightgreen", "non-compliant": "orange", "unreachable": "red", "error": "crimson", "unknown": "lightgrey"}
+    for r in rows:
+        status = resolve_status(r)
+        badge = {
+            "schemaVersion": 1,
+            "label": r.get("name", "agent"),
+            "message": status,
+            "color": color_map.get(status, "lightgrey"),
+        }
+        (badges_dir / f"{safe_slug(r.get('slug', 'agent'))}.json").write_text(json.dumps(badge, indent=2), encoding="utf-8")
 
-trs = []
-for r in rows:
-    probe_url = r.get("probe_url", "")
-    link = f'<a href="{probe_url}">{probe_url}</a>' if probe_url else ""
-    details = (r.get("details") or "").replace("<", "&lt;").replace(">", "&gt;")
-    status = resolve_status(r)
-    meta = status_meta.get(status, status_meta["unknown"])
-    status_chip = f'<span class="status-chip {meta["class"]}">{meta["icon"]} {meta["label"]}</span>'
-    trs.append(
-        f"<tr><td>{r.get('name')}</td><td>{r.get('vendor','')}</td><td>{status_chip}</td><td>{details}</td><td>{link}</td></tr>"
-    )
+    status_meta = {
+        "compliant": {"icon": "✅", "label": "Compliant", "class": "status-compliant"},
+        "non-compliant": {"icon": "⚠️", "label": "Non-compliant", "class": "status-non-compliant"},
+        "unreachable": {"icon": "❌", "label": "Unreachable", "class": "status-unreachable"},
+        "error": {"icon": "🛑", "label": "Error", "class": "status-error"},
+        "unknown": {"icon": "❔", "label": "Unknown", "class": "status-unknown"},
+    }
 
-html = f"""<!doctype html>
+    trs = []
+    for r in rows:
+        probe_url = str(r.get("probe_url") or "")
+        escaped_probe_url = html.escape(probe_url, quote=True)
+        link = f'<a href="{escaped_probe_url}">{escaped_probe_url}</a>' if probe_url else ""
+        name = html.escape(str(r.get("name") or ""), quote=True)
+        vendor = html.escape(str(r.get("vendor") or ""), quote=True)
+        details = html.escape(str(r.get("details") or ""), quote=True)
+        slug = safe_slug(r.get("slug", name))
+        status = resolve_status(r)
+        meta = status_meta.get(status, status_meta["unknown"])
+        status_chip = f'<span class="status-chip {meta["class"]}">{meta["icon"]} {meta["label"]}</span>'
+        trs.append(
+            f'<tr id="agent-{slug}"><td>{name}</td><td>{vendor}</td><td>{status_chip}</td>'
+            f'<td>{details}</td><td>{link}</td><td>{report_markup(r, status)}</td></tr>'
+        )
+
+    page = f"""<!doctype html>
 <html lang=\"en\">
 <head>
   <meta charset=\"utf-8\" />
@@ -143,7 +199,7 @@ html = f"""<!doctype html>
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      overflow: hidden;
+      overflow-x: auto;
       box-shadow: 0 2px 10px rgba(18, 38, 58, 0.06);
     }}
     table {{ border-collapse: collapse; width: 100%; }}
@@ -158,6 +214,13 @@ html = f"""<!doctype html>
     }}
     a {{ color: #005fcc; }}
     a:hover {{ text-decoration: none; }}
+    tr:target {{ outline: 3px solid #78aee8; outline-offset: -3px; }}
+    .report-cell {{ min-width: 210px; }}
+    .report-cell img {{ display: block; max-width: 100%; height: auto; }}
+    .report-details {{ margin-top: 0.6rem; }}
+    .report-details summary {{ color: #005fcc; cursor: pointer; font-weight: 600; }}
+    .report-details iframe {{ display: block; width: min(640px, 80vw); max-width: 640px; border: 0; margin-top: 0.65rem; }}
+    .report-unavailable {{ color: var(--muted); font-size: 0.88rem; }}
   </style>
 </head>
 <body>
@@ -173,14 +236,29 @@ html = f"""<!doctype html>
     </div>
     <div class=\"table-wrap\">
       <table>
-        <thead><tr><th>Agent</th><th>Vendor</th><th>Status</th><th>Details</th><th>Probe URL</th></tr></thead>
+        <thead><tr><th>Agent</th><th>Vendor</th><th>Status</th><th>Details</th><th>Probe URL</th><th>Validation Report</th></tr></thead>
         <tbody>
           {''.join(trs)}
         </tbody>
       </table>
     </div>
   </main>
+  <script>
+    document.querySelectorAll(".report-details").forEach((details) => {{
+      details.addEventListener("toggle", () => {{
+        if (!details.open) return;
+        const frame = details.querySelector("iframe[data-src]");
+        if (!frame) return;
+        frame.setAttribute("src", frame.dataset.src);
+        frame.removeAttribute("data-src");
+      }}, {{ once: true }});
+    }});
+  </script>
 </body>
 </html>
 """
-(out_dir / "index.html").write_text(html)
+    (out_dir / "index.html").write_text(page, encoding="utf-8")
+
+
+if __name__ == "__main__":
+    generate_site()

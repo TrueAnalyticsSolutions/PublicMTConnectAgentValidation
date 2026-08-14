@@ -87,6 +87,21 @@ jobs:
             fi
           fi
 
+          report_id=$(echo "${RESULTS_JSON:-[]}" | jq -r '
+            [
+              .[]
+              | select(.ok == true)
+              | .body[]?
+              | (.ReportId? // .reportId? // .Id? // .id? // empty)
+              | select(type == "string")
+            ][0] // empty
+          ')
+
+          uuid_pattern='^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+          if [[ ! "$report_id" =~ $uuid_pattern ]]; then
+            report_id=""
+          fi
+
           jq -n \
             --arg name "$AGENT_NAME" \
             --arg vendor "$AGENT_VENDOR" \
@@ -95,8 +110,9 @@ jobs:
             --arg slug "$AGENT_SLUG" \
             --arg status "$status" \
             --arg details "$details" \
+            --arg report_id "$report_id" \
             --argjson validator_results "${RESULTS_JSON:-[]}" \
-            '{name:$name,vendor:$vendor,host:$host,probe_url:$probe_url,slug:$slug,status:$status,details:$details,validator_results:$validator_results}' \
+            '{name:$name,vendor:$vendor,host:$host,probe_url:$probe_url,slug:$slug,status:$status,details:$details,report_id:(if $report_id == "" then null else $report_id end),validator_results:$validator_results}' \
             > "status/${AGENT_SLUG}.json"
 
       - name: Upload status artifact
