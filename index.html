@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTConnect Public Agent Compliance Report</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --border: #d8e1eb;
+      --text: #12263a;
+      --muted: #4f6478;
+      --compliant-bg: #e7f8ef;
+      --compliant-text: #0a6b3f;
+      --non-compliant-bg: #fff4df;
+      --non-compliant-text: #7a4c00;
+      --unreachable-bg: #ffebeb;
+      --unreachable-text: #8e1f1f;
+      --error-bg: #ffeaf1;
+      --error-text: #8a1246;
+      --unknown-bg: #eef2f6;
+      --unknown-text: #3a4b5c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      color: var(--text);
+      background: linear-gradient(180deg, #f0f5fb 0%, var(--bg) 240px);
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+    }
+    .meta { color: var(--muted); margin: 0.25rem 0 0; }
+    .summary-grid {
+      margin: 1.5rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 2px 8px rgba(18, 38, 58, 0.06);
+    }
+    .summary-label { font-size: 0.82rem; color: var(--muted); }
+    .summary-value { margin-top: 0.25rem; font-size: 1.5rem; font-weight: 700; }
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .status-compliant { background: var(--compliant-bg); color: var(--compliant-text); border-color: #b7e8cf; }
+    .status-non-compliant { background: var(--non-compliant-bg); color: var(--non-compliant-text); border-color: #ffe0a6; }
+    .status-unreachable { background: var(--unreachable-bg); color: var(--unreachable-text); border-color: #ffc6c6; }
+    .status-error { background: var(--error-bg); color: var(--error-text); border-color: #ffc7dc; }
+    .status-unknown { background: var(--unknown-bg); color: var(--unknown-text); border-color: #d6dee7; }
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 2px 10px rgba(18, 38, 58, 0.06);
+    }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid #e8edf3; padding: 0.75rem 0.9rem; text-align: left; vertical-align: top; }
+    tr:last-child td { border-bottom: 0; }
+    th {
+      background: #f4f8fc;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+    }
+    a { color: #005fcc; }
+    a:hover { text-decoration: none; }
+    tr:target { outline: 3px solid #78aee8; outline-offset: -3px; }
+    .report-cell { min-width: 210px; }
+    .report-cell img { display: block; max-width: 100%; height: auto; }
+    .report-details { margin-top: 0.6rem; }
+    .report-details summary { color: #005fcc; cursor: pointer; font-weight: 600; }
+    .report-details iframe { display: block; width: min(640px, 80vw); max-width: 640px; border: 0; margin-top: 0.65rem; }
+    .report-unavailable { color: var(--muted); font-size: 0.88rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MTConnect Public Agent Compliance Report</h1>
+    <p class="meta">Generated at 2026-08-31T08:22:11+00:00 UTC</p>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="summary-label">📊 Total Agents</div><div class="summary-value">11</div></div>
+      <div class="summary-card"><div class="summary-label">✅ Compliant</div><div class="summary-value">0</div></div>
+      <div class="summary-card"><div class="summary-label">⚠️ Non-compliant</div><div class="summary-value">9</div></div>
+      <div class="summary-card"><div class="summary-label">❌ Unreachable</div><div class="summary-value">2</div></div>
+      <div class="summary-card"><div class="summary-label">🛑 Error</div><div class="summary-value">0</div></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Agent</th><th>Vendor</th><th>Status</th><th>Details</th><th>Probe URL</th><th>Validation Report</th></tr></thead>
+        <tbody>
+          <tr id="agent-mtconnect-institute-demo"><td>MTConnect Institute Demo</td><td>MTConnect Institute</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="https://demo.mtconnect.org/probe">https://demo.mtconnect.org/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-mazak-m12345"><td>Mazak M12345</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5701/probe">http://mtconnect.mazakcorp.com:5701/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-mazak-m12346-3-axis-mill"><td>Mazak M12346 3 axis mill</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5717/probe">http://mtconnect.mazakcorp.com:5717/probe</a></td><td>
+      <div class="report-cell">
+        <a href="https://validator.tams.ai/e528463e-f036-4069-5556-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation" target="_blank" rel="noopener noreferrer">
+          <img src="https://validator.tams.ai/badges/reports/e528463e-f036-4069-5556-08df0738ec76.svg" alt="MTConnect validation status for Mazak M12346 3 axis mill" loading="lazy" />
+        </a>
+        <details class="report-details">
+          <summary>View embedded report</summary>
+          <iframe
+            data-src="https://validator.tams.ai/embed/reports/e528463e-f036-4069-5556-08df0738ec76"
+            title="Validation report for Mazak M12346 3 axis mill"
+            width="100%"
+            height="220"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+          <noscript><a href="https://validator.tams.ai/e528463e-f036-4069-5556-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation">Open the full validation report</a></noscript>
+        </details>
+      </div>
+    </td></tr><tr id="agent-mazak-mfms10-mc1"><td>Mazak MFMS10-MC1</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5609/probe">http://mtconnect.mazakcorp.com:5609/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-mazak-mfms10-mc2"><td>Mazak MFMS10-MC2</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5610/probe">http://mtconnect.mazakcorp.com:5610/probe</a></td><td>
+      <div class="report-cell">
+        <a href="https://validator.tams.ai/9869c0a8-8c24-45f4-5557-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation" target="_blank" rel="noopener noreferrer">
+          <img src="https://validator.tams.ai/badges/reports/9869c0a8-8c24-45f4-5557-08df0738ec76.svg" alt="MTConnect validation status for Mazak MFMS10-MC2" loading="lazy" />
+        </a>
+        <details class="report-details">
+          <summary>View embedded report</summary>
+          <iframe
+            data-src="https://validator.tams.ai/embed/reports/9869c0a8-8c24-45f4-5557-08df0738ec76"
+            title="Validation report for Mazak MFMS10-MC2"
+            width="100%"
+            height="220"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+          <noscript><a href="https://validator.tams.ai/9869c0a8-8c24-45f4-5557-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation">Open the full validation report</a></noscript>
+        </details>
+      </div>
+    </td></tr><tr id="agent-mazak-mfms18-mc1-hcn-q"><td>Mazak MFMS18-MC1 HCN Q</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5612/probe">http://mtconnect.mazakcorp.com:5612/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-mazak-mill-w-smooth-g"><td>Mazak Mill w/SMooth-G</td><td>Mazak</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="http://mtconnect.mazakcorp.com:5611/probe">http://mtconnect.mazakcorp.com:5611/probe</a></td><td>
+      <div class="report-cell">
+        <a href="https://validator.tams.ai/1dad450c-cafa-46ad-5558-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation" target="_blank" rel="noopener noreferrer">
+          <img src="https://validator.tams.ai/badges/reports/1dad450c-cafa-46ad-5558-08df0738ec76.svg" alt="MTConnect validation status for Mazak Mill w/SMooth-G" loading="lazy" />
+        </a>
+        <details class="report-details">
+          <summary>View embedded report</summary>
+          <iframe
+            data-src="https://validator.tams.ai/embed/reports/1dad450c-cafa-46ad-5558-08df0738ec76"
+            title="Validation report for Mazak Mill w/SMooth-G"
+            width="100%"
+            height="220"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+          <noscript><a href="https://validator.tams.ai/1dad450c-cafa-46ad-5558-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation">Open the full validation report</a></noscript>
+        </details>
+      </div>
+    </td></tr><tr id="agent-stratasys-f3300"><td>Stratasys F3300</td><td>Stratasys</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="https://f3300.mtconnect.stratasys.com/probe">https://f3300.mtconnect.stratasys.com/probe</a></td><td>
+      <div class="report-cell">
+        <a href="https://validator.tams.ai/af319de8-ae83-474c-5559-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation" target="_blank" rel="noopener noreferrer">
+          <img src="https://validator.tams.ai/badges/reports/af319de8-ae83-474c-5559-08df0738ec76.svg" alt="MTConnect validation status for Stratasys F3300" loading="lazy" />
+        </a>
+        <details class="report-details">
+          <summary>View embedded report</summary>
+          <iframe
+            data-src="https://validator.tams.ai/embed/reports/af319de8-ae83-474c-5559-08df0738ec76"
+            title="Validation report for Stratasys F3300"
+            width="100%"
+            height="220"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+          <noscript><a href="https://validator.tams.ai/af319de8-ae83-474c-5559-08df0738ec76?utm_source=github&amp;utm_medium=badge&amp;utm_campaign=mtconnect_validation">Open the full validation report</a></noscript>
+        </details>
+      </div>
+    </td></tr><tr id="agent-stratasys-f370cr"><td>Stratasys F370CR</td><td>Stratasys</td><td><span class="status-chip status-unreachable">❌ Unreachable</span></td><td>Could not fetch /probe from remote host</td><td><a href="https://f370cr.mtconnect.stratasys.com/probe">https://f370cr.mtconnect.stratasys.com/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-stratasys-f450mc"><td>Stratasys F450mc</td><td>Stratasys</td><td><span class="status-chip status-non-compliant">⚠️ Non-compliant</span></td><td>Validator API/upload failure</td><td><a href="https://fortus450mc.mtconnect.stratasys.com/probe">https://fortus450mc.mtconnect.stratasys.com/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr><tr id="agent-stratasys-f900"><td>Stratasys F900</td><td>Stratasys</td><td><span class="status-chip status-unreachable">❌ Unreachable</span></td><td>Could not fetch /probe from remote host</td><td><a href="https://mtconnect.stratasys.com/probe">https://mtconnect.stratasys.com/probe</a></td><td><span class="report-unavailable">Validation report unavailable</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script>
+    document.querySelectorAll(".report-details").forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (!details.open) return;
+        const frame = details.querySelector("iframe[data-src]");
+        if (!frame) return;
+        frame.setAttribute("src", frame.dataset.src);
+        frame.removeAttribute("data-src");
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>

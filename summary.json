@@ -1,0 +1,538 @@
+{
+  "generated_at": "2026-08-31T08:22:11+00:00",
+  "total": 11,
+  "compliant": 0,
+  "non_compliant": 9,
+  "unreachable": 2,
+  "error": 0,
+  "agents": [
+    {
+      "name": "MTConnect Institute Demo",
+      "vendor": "MTConnect Institute",
+      "host": "https://demo.mtconnect.org/",
+      "probe_url": "https://demo.mtconnect.org/probe",
+      "slug": "mtconnect-institute-demo",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Mazak M12345",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5701/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5701/probe",
+      "slug": "mazak-m12345",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Mazak M12346 3 axis mill",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5717/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5717/probe",
+      "slug": "mazak-m12346-3-axis-mill",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "e528463e-f036-4069-5556-08df0738ec76",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "e528463e-f036-4069-5556-08df0738ec76",
+              "name": "Devices_V_1_7_0.xml",
+              "created": "2026-08-31T08:21:56.872466Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 0,
+              "messageCount": 0,
+              "mtconnectVersion": "V_1_7_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'subType' PART_NUMBER for 'type' PART_UNIQUE_ID.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[33]",
+                  "severity": "ERROR"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"33372544396\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/33372544396\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS10-MC1",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5609/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5609/probe",
+      "slug": "mazak-mfms10-mc1",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS10-MC2",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5610/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5610/probe",
+      "slug": "mazak-mfms10-mc2",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "9869c0a8-8c24-45f4-5557-08df0738ec76",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "9869c0a8-8c24-45f4-5557-08df0738ec76",
+              "name": "Devices_V_1_3_0.xml",
+              "created": "2026-08-31T08:21:56.5802393Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 3,
+              "messageCount": 9,
+              "mtconnectVersion": "V_1_3_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Unhandled XML element 'AssetCounts' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Header[1]/m:AssetCounts[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type TOOL_GROUP already exists.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[19]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"33372544396\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/33372544396\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS18-MC1 HCN Q",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5612/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5612/probe",
+      "slug": "mazak-mfms18-mc1-hcn-q",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Mazak Mill w/SMooth-G",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5611/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5611/probe",
+      "slug": "mazak-mill-w-smooth-g",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "1dad450c-cafa-46ad-5558-08df0738ec76",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "1dad450c-cafa-46ad-5558-08df0738ec76",
+              "name": "Devices_V_1_4_0.xml",
+              "created": "2026-08-31T08:21:56.5955665Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 1,
+              "messageCount": 9,
+              "mtconnectVersion": "V_1_4_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Unhandled XML element 'AssetCounts' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Header[1]/m:AssetCounts[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type TOOL_GROUP already exists.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[19]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"33372544396\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/33372544396\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F3300",
+      "vendor": "Stratasys",
+      "host": "https://f3300.mtconnect.stratasys.com/",
+      "probe_url": "https://f3300.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f3300",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "af319de8-ae83-474c-5559-08df0738ec76",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "af319de8-ae83-474c-5559-08df0738ec76",
+              "name": "Devices_V_2_3_0.xml",
+              "created": "2026-08-31T08:21:57.1954883Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 4,
+              "warningCount": 2,
+              "messageCount": 0,
+              "mtconnectVersion": "V_2_3_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'type' value, not implemented in 2.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[4]/m:Components[1]/m:Fan[1]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 2.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[4]/m:Components[1]/m:Fan[2]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Component of type 'Feeder' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'Heating' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'Vacuum' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'subType' COMPLETE for 'type' EQUIPMENT_TIMER.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controllers[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "ERROR"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"33372544396\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/33372544396\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F370CR",
+      "vendor": "Stratasys",
+      "host": "https://f370cr.mtconnect.stratasys.com/",
+      "probe_url": "https://f370cr.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f370cr",
+      "status": "unreachable",
+      "details": "Could not fetch /probe from remote host",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F450mc",
+      "vendor": "Stratasys",
+      "host": "https://fortus450mc.mtconnect.stratasys.com/",
+      "probe_url": "https://fortus450mc.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f450mc",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F900",
+      "vendor": "Stratasys",
+      "host": "https://mtconnect.stratasys.com/",
+      "probe_url": "https://mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f900",
+      "status": "unreachable",
+      "details": "Could not fetch /probe from remote host",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 429,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/429",
+            "title": "Too Many Requests",
+            "status": 429,
+            "detail": "Validation concurrency limit exceeded."
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 429"
+        }
+      ]
+    }
+  ]
+}
