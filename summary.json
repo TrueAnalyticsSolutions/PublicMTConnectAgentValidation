@@ -1,0 +1,1312 @@
+{
+  "generated_at": "2026-10-19T08:23:19+00:00",
+  "total": 11,
+  "compliant": 2,
+  "non_compliant": 8,
+  "unreachable": 1,
+  "error": 0,
+  "agents": [
+    {
+      "name": "MTConnect Institute Demo",
+      "vendor": "MTConnect Institute",
+      "host": "https://demo.mtconnect.org/",
+      "probe_url": "https://demo.mtconnect.org/probe",
+      "slug": "mtconnect-institute-demo",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "d73844df-4b85-4dae-eddc-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "d73844df-4b85-4dae-eddc-08df283b9784",
+              "name": "Devices_V_2_8_1.xml",
+              "created": "2026-10-19T08:23:00.3658987Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 2,
+              "warningCount": 17,
+              "messageCount": 16,
+              "mtconnectVersion": "V_2_8_1",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[1]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[2]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[3]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[1]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[2]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[2]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[4]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[3]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[3]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[4]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[11]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[12]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[13]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[17]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[19]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Invalid 'subType' ALL for 'type' OPERATING_SYSTEM.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'subType' ALL for 'type' APPLICATION.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:DataItems[1]/m:DataItem[12]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[1]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[2]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[3]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 2.8.1.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[3]/m:DataItems[1]/m:DataItem[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[3]/m:DataItems[1]/m:DataItem[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[3]/m:DataItems[1]/m:DataItem[2]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[1]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[2]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Unhandled XML element 'Relationships' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Rotary[3]/m:Configuration[1]/m:Relationships[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[2]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak M12345",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5701/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5701/probe",
+      "slug": "mazak-m12345",
+      "status": "compliant",
+      "details": "Probe response is compliant",
+      "report_id": "895de14d-3f30-4953-edd4-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "895de14d-3f30-4953-edd4-08df283b9784",
+              "name": "Devices_V_1_6_0.xml",
+              "created": "2026-10-19T08:22:58.3924584Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": true,
+              "errorCount": 0,
+              "warningCount": 0,
+              "messageCount": 7,
+              "mtconnectVersion": "V_1_6_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": true,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is compliant."
+        }
+      ]
+    },
+    {
+      "name": "Mazak M12346 3 axis mill",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5717/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5717/probe",
+      "slug": "mazak-m12346-3-axis-mill",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "aec3420b-1fae-4676-edd8-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "aec3420b-1fae-4676-edd8-08df283b9784",
+              "name": "Devices_V_1_7_0.xml",
+              "created": "2026-10-19T08:22:59.2391806Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 0,
+              "messageCount": 0,
+              "mtconnectVersion": "V_1_7_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'subType' PART_NUMBER for 'type' PART_UNIQUE_ID.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[33]",
+                  "severity": "ERROR"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS10-MC1",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5609/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5609/probe",
+      "slug": "mazak-mfms10-mc1",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "1a63af0a-db57-4928-edd7-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "1a63af0a-db57-4928-edd7-08df283b9784",
+              "name": "Devices_V_1_3_0.xml",
+              "created": "2026-10-19T08:22:59.1887842Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 0,
+              "messageCount": 9,
+              "mtconnectVersion": "V_1_3_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[11]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type TOOL_GROUP already exists.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[20]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS10-MC2",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5610/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5610/probe",
+      "slug": "mazak-mfms10-mc2",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "02ee3a4a-d9a0-4a01-eddd-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "02ee3a4a-d9a0-4a01-eddd-08df283b9784",
+              "name": "Devices_V_1_3_0.xml",
+              "created": "2026-10-19T08:23:03.1493202Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 3,
+              "messageCount": 9,
+              "mtconnectVersion": "V_1_3_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Unhandled XML element 'AssetCounts' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Header[1]/m:AssetCounts[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type TOOL_GROUP already exists.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[19]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Mazak MFMS18-MC1 HCN Q",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5612/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5612/probe",
+      "slug": "mazak-mfms18-mc1-hcn-q",
+      "status": "compliant",
+      "details": "Probe response is compliant",
+      "report_id": "3b24f15a-5043-48f2-edda-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "3b24f15a-5043-48f2-edda-08df283b9784",
+              "name": "Devices_V_1_5_0.xml",
+              "created": "2026-10-19T08:23:00.0962882Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": true,
+              "errorCount": 0,
+              "warningCount": 0,
+              "messageCount": 7,
+              "mtconnectVersion": "V_1_5_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": true,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is compliant."
+        }
+      ]
+    },
+    {
+      "name": "Mazak Mill w/SMooth-G",
+      "vendor": "Mazak",
+      "host": "http://mtconnect.mazakcorp.com:5611/",
+      "probe_url": "http://mtconnect.mazakcorp.com:5611/probe",
+      "slug": "mazak-mill-w-smooth-g",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "0b82cc8a-9a15-4258-edd9-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "0b82cc8a-9a15-4258-edd9-08df283b9784",
+              "name": "Devices_V_1_4_0.xml",
+              "created": "2026-10-19T08:22:59.9281637Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 1,
+              "warningCount": 1,
+              "messageCount": 9,
+              "mtconnectVersion": "V_1_4_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Unhandled XML element 'AssetCounts' is not defined by the parsed MTConnect model.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Header[1]/m:AssetCounts[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[9]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[10]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended type TOOL_GROUP already exists.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[14]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Extended type.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[15]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[19]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "INFO"
+                },
+                {
+                  "message": "Extended subType.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[8]",
+                  "severity": "INFO"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F3300",
+      "vendor": "Stratasys",
+      "host": "https://f3300.mtconnect.stratasys.com/",
+      "probe_url": "https://f3300.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f3300",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "9d3cbbec-e306-42d4-edd6-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "9d3cbbec-e306-42d4-edd6-08df283b9784",
+              "name": "Devices_V_2_3_0.xml",
+              "created": "2026-10-19T08:22:58.8822625Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 4,
+              "warningCount": 2,
+              "messageCount": 0,
+              "mtconnectVersion": "V_2_3_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'type' value, not implemented in 2.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[4]/m:Components[1]/m:Fan[1]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 2.3.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Axes[1]/m:Components[1]/m:Linear[4]/m:Components[1]/m:Fan[2]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Component of type 'Feeder' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'Heating' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'Vacuum' is not valid for organizer type 'Auxiliaries'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Auxiliaries[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'subType' COMPLETE for 'type' EQUIPMENT_TIMER.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controllers[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "ERROR"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F370CR",
+      "vendor": "Stratasys",
+      "host": "https://f370cr.mtconnect.stratasys.com/",
+      "probe_url": "https://f370cr.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f370cr",
+      "status": "unreachable",
+      "details": "Could not fetch /probe from remote host",
+      "report_id": null,
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 500,
+          "ok": false,
+          "body": {
+            "type": "https://httpstatuses.com/500",
+            "title": "Internal Server Error",
+            "status": 500,
+            "detail": "Validation failed due to a server error. Reference trace ID: 40000087-0000-9f00-b63f-84710c7967bb"
+          },
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Validation API returned HTTP 500"
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F450mc",
+      "vendor": "Stratasys",
+      "host": "https://fortus450mc.mtconnect.stratasys.com/",
+      "probe_url": "https://fortus450mc.mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f450mc",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "ab50681a-c207-46e5-edd5-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "ab50681a-c207-46e5-edd5-08df283b9784",
+              "name": "Devices_V_1_5_0.xml",
+              "created": "2026-10-19T08:22:58.7002749Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 16,
+              "warningCount": 0,
+              "messageCount": 0,
+              "mtconnectVersion": "V_1_5_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[2]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[2]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[3]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[3]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[5]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[5]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[6]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[6]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[7]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[7]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'Electrical' is not valid for organizer type 'Systems'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:Components[1]/m:Path[1]/m:DataItems[1]/m:DataItem[7]",
+                  "severity": "ERROR"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    },
+    {
+      "name": "Stratasys F900",
+      "vendor": "Stratasys",
+      "host": "https://mtconnect.stratasys.com/",
+      "probe_url": "https://mtconnect.stratasys.com/probe",
+      "slug": "stratasys-f900",
+      "status": "non-compliant",
+      "details": "Validator API/upload failure",
+      "report_id": "3de96ea8-6bd5-48b6-eddb-08df283b9784",
+      "validator_results": [
+        {
+          "filePath": "probe.xml",
+          "status": 200,
+          "ok": true,
+          "body": [
+            {
+              "id": "3de96ea8-6bd5-48b6-eddb-08df283b9784",
+              "name": "Devices_V_1_5_0.xml",
+              "created": "2026-10-19T08:23:00.2027646Z",
+              "isPublic": false,
+              "documentType": "Devices",
+              "isValid": false,
+              "errorCount": 33,
+              "warningCount": 24,
+              "messageCount": 0,
+              "mtconnectVersion": "V_1_5_0",
+              "validationVersion": "2.8.2.0",
+              "author": "True Analytics Manufacturing Solutions",
+              "messages": [
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Adapters[1]/m:DataItems[1]/m:DataItem[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Adapters[1]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' Adapters not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Adapters[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' value LightTower does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:LightTower[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' LightTower does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:LightTower[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Feeder[1]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Feeder[2]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Feeder[3]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Feeder[4]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' value Electrical does not match expected values from ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Electrical does not match expected values in ComponentTypes.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Electrical[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Vacuum not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:Vacuum[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:WorkEnvelope[1]/m:DataItems[1]/m:DataItem[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value, not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:WorkEnvelope[1]/m:DataItems[1]/m:DataItem[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' WorkEnvelope not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]/m:Components[1]/m:WorkEnvelope[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Component of type 'Electrical' is not valid for organizer type 'Systems'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Component of type 'PowerSupply' is not valid for organizer type 'Systems'.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Systems[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[1]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[1]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[1]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[2]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[2]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[2]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[3]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[3]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[3]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[3]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[4]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[4]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[4]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[4]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[5]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[5]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[5]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[5]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[6]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[6]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[6]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[6]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[7]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[7]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[7]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[7]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[8]/m:DataItems[1]/m:DataItem[4]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[8]/m:DataItems[1]/m:DataItem[16]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' EVENT.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[8]/m:DataItems[1]/m:DataItem[18]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Part not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:Components[1]/m:Part[8]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]/m:DataItems[1]/m:DataItem[1]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Parts not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Parts[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[5]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'type' value for 'category' SAMPLE.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Controller[1]/m:DataItems[1]/m:DataItem[6]",
+                  "severity": "ERROR"
+                },
+                {
+                  "message": "Invalid 'Type' Material not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Resources[1]/m:Components[1]/m:Materials[1]/m:Components[1]/m:Material[1]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' Material not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Resources[1]/m:Components[1]/m:Materials[1]/m:Components[1]/m:Material[2]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' Material not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Resources[1]/m:Components[1]/m:Materials[1]/m:Components[1]/m:Material[3]",
+                  "severity": "WARNING"
+                },
+                {
+                  "message": "Invalid 'Type' Material not implemented in 1.5.0.",
+                  "xPath": "/m:MTConnectDevices[1]/m:Devices[1]/m:Device[1]/m:Components[1]/m:Resources[1]/m:Components[1]/m:Materials[1]/m:Components[1]/m:Material[4]",
+                  "severity": "WARNING"
+                }
+              ],
+              "meta": {
+                "type": null,
+                "author": "tbm0115",
+                "notes": "{\"schema\":1,\"source\":\"github-action\",\"repo\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation\",\"ref\":\"refs/heads/main\",\"sha\":\"ed8a4d3242bb59e68275d118932fc8677041a971\",\"path\":\"probe.xml\",\"run_id\":\"39222338458\",\"workflow\":\"weekly-public-agent-validation\",\"run_attempt\":\"1\",\"run_url\":\"https://github.com/TrueAnalyticsSolutions/PublicMTConnectAgentValidation/actions/runs/39222338458\",\"job\":\"validate\",\"workspaceKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\",\"trackKey\":\"TrueAnalyticsSolutions/PublicMTConnectAgentValidation:probe.xml\"}",
+                "revision": null,
+                "previousVersionId": null
+              }
+            }
+          ],
+          "compliant": false,
+          "validationErrorCount": 0,
+          "validationWarningCount": 0,
+          "validationMessage": "Document is non-compliant (0 error(s))."
+        }
+      ]
+    }
+  ]
+}
